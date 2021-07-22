@@ -1,7 +1,7 @@
 # Loading custom maps in Escape from Tarkov (stalker mod)
  An attempt to move stalker location into Esacpe From Tarkov
 
-<h2>Step 0: Preparations</h2><br>
+<h2>Step 0: Preparations</h2>
 You will need: <br>
 1. Unity 2018 (EFT using 2018 version). Download UnityHub from https://unity.com/ and install any 2018 version. I use 2018.4.35f1<br>
 2. Blender https://www.blender.org/ <br>
@@ -19,7 +19,7 @@ You will need: <br>
 </ol> 
 Full asset bundle tutorials: https://learn.unity.com/tutorial/introduction-to-asset-bundles
 <br>
-<h2>Step 2: Making EFT load our bundle</h2><br>
+<h2>Step 2: Making EFT load our bundle</h2>
 To make the game load your bundle we need to add some code that will do it. We may create our custom DLL and load it inside the game via Harmony or NLOG, but modofying original code is more simple to me.<br>
 <ol>
 	<li>Open DnSpy.</li>
@@ -30,7 +30,7 @@ To make the game load your bundle we need to add some code that will do it. We m
 	<li>Launch the game, go to raid, press F11 when you finally join the game. You should be able to see your cube, if not check console (` key) for errors </li>
 </ol>
 <br>
-<h2>Step 3: Converting stalker levels</h2><br>
+<h2>Step 3: Converting stalker levels</h2>
 <ol>
 	<li>Convert .max level dump to .fbx using 3ds max or other software.</li>
 	<li>Scale model by 0.65 to better fit EFT player size (optional)</li>
@@ -43,7 +43,7 @@ To make the game load your bundle we need to add some code that will do it. We m
 	<li>Create a "Materials" folder. Inside this folder create folders with stalker texture names ex: %Unity3DProjectDirectory%/Assets/Materials/Bricks/</li>
 	<li>Click KLESKBY/Fix stalker materials in the toolbar. Most of the white untextured models should become texture now.</li>
 </ol>	
-<h2>Step 4: Converting stalker terrain to Unity3d terrain</h2><br>
+<h2>Step 4: Converting stalker terrain to Unity3d terrain</h2>
 <ol>
 	<li>Launch blender, import level fbx. Click on Object > RemoveEverythingBut (Top left corner). This should delete all non-terrain objects. Select everything that is left and combine meshes (Press Ctrl + J). Now you should have single terrain object.</li>
 	<li>Export it as .fbx and import inside unity.</li>
@@ -53,7 +53,7 @@ To make the game load your bundle we need to add some code that will do it. We m
 	<li>Move and edit it a bit to fit the original terrain.</li>
 </ol>	
 
-<h2>Step 5: Finalizing </h2><br>
+<h2>Step 5: Finalizing </h2>
 <ol>
 	<li>Create AudioSource, enable "loop", "Play on Awake". Make it play the ambient song. For stalker this should fit: https://www.youtube.com/watch?v=V92zVorYaqo</li>
 	<li>Spawn trees, grass, brushes. Add some light, decals, etc.</li>
@@ -66,7 +66,7 @@ To make the game load your bundle we need to add some code that will do it. We m
 	<li>Move and edit it a bit to fir the origian terrain.</li>
 </ol>	
 
-<h2>Problems and ToDo list:</h2><br>
+<h2>Problems and ToDo list:</h2>
 However it is not that easy and to make it work noramly you need a good understanding how tarkov, Unity3d works and enough reverse engineering experance.
 <ol>
 	<li>Something teleports bots back to normal navmesh/terrain even though I delete it. Maybe instead of removing terrain we can just remove props and add our own models?</li>
