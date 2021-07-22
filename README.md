@@ -69,11 +69,11 @@ To make the game load your bundle we need to add some code that will do it. We m
 <h2>Problems and ToDo list:</h2><br>
 However it is not that easy and to make it work noramly you need a good understanding how tarkov, Unity3d works and enough reverse engineering experance.
 <ol>
-	<li>Something teleports bots back to normal navmesh/terrian even tho i delete it. Maybe instead of removing terrain we can just remvoe props and add our own models??</li>
-	<li>A lot of errors that make significant perforance impact.</li>
-	<li>No bullet impact effect (need to create ballistic colliders). It is very tensely.</li>
+	<li>Something teleports bots back to normal navmesh/terrain even though I delete it. Maybe instead of removing terrain we can just remove props and add our own models?</li>
+	<li>A lot of errors that make a significant performance impact.</li>
+	<li>No bullet impact effect (need to create ballistic colliders). It is very dreary.</li>
 	<li>Idk how to create loot and loot pools</li>
-	<li>Moving exit triggers not quite accurate. Idk how to add my own exits</li>
+	<li>Moving exit triggers are not quite accurate. Idk how to add my own exits.</li>
 	<li>Idk how to create bot spawn zones.</li>
 </ol>	
-Instead of creating mods I decided to work on my own game so most likely I will not continue this unless someone help me
+Instead of creating mods I decided to work on my own game so most likely I will not continue this unless someone helps me.
