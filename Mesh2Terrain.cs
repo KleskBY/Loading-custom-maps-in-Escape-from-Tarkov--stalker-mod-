@@ -69,7 +69,7 @@ public class Mesh2Terrain : EditorWindow
 			}
 	
 			terrain.SetHeights(0, 0, heights);
-			AssetDatabase.CreateAsset(terrain, "Assets/GeneratedTerrain.asset");
+			AssetDatabase.CreateAsset(terrain, "Assets/" + Selection.activeGameObject.name + "Terrain.asset");
 		}
 	}
 
@@ -78,7 +78,7 @@ public class Mesh2Terrain : EditorWindow
 		TerrainData[] terrainDatas = FindObjectsOfType<TerrainData>();
 		for(int i = 0; i < terrainDatas.Length; i++)
 		{
-			AssetDatabase.CreateAsset(terrainDatas[i], "KLESKBY/GeneratedTerrain" + i.ToString() + ".asset");
+			AssetDatabase.CreateAsset(terrainDatas[i], "Assets/GeneratedTerrain" + i.ToString() + ".asset");
 		}
 	}
 }

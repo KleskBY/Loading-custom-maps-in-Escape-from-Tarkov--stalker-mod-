@@ -67,7 +67,7 @@ To make the game load your bundle we need to add some code that will do it. We m
 </ol>	
 
 <h2>Problems and ToDo list:</h2>
-However it is not that easy and to make it work noramly you need a good understanding how tarkov, Unity3d works and enough reverse engineering experance.
+However it is not that easy and to make it work noramly you need a good PC, understanding both EFT Client and Server side, Unity3d and enough reverse engineering experance.
 <ol>
 	<li>Something teleports bots back to normal navmesh/terrain even though I delete it. Maybe instead of removing terrain we can just remove props and add our own models?</li>
 	<li>A lot of errors that make a significant performance impact.</li>
