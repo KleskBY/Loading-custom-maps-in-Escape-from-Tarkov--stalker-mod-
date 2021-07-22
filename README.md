@@ -53,4 +53,27 @@ To make game load your bundle we need to add some code that will do it. We may c
 	<li>Move and edit it a bit to fir the origian terrain.</li>
 </ol>	
 
+<h2>Step 5: Finalizing </h2><br>
+<ol>
+	<li>Create AudioSource, enable "loop", "Play on Awake". Make it play the ambient song. For stalker this should fit: https://www.youtube.com/watch?v=V92zVorYaqo</li>
+	<li>Spawn trees, grass, brushes. Add some light, decals, etc.</li>
+	<li>Create prefab like in Step 1</li>
+	<li>Bake NavMesh Window>AI>Naigation>Bake</li>
+	<li>Bake occlusion culling Window>Rendering>Occlusion culling>Bake</li>
+	<li>Place it as a child object of cube.</li>
+	<li>Move Mesh2Terrain.cs inside "Editor" folder(%Unity3DProjectDirectory%/Assets/Editor/Mesh2Terrain.cs)</li>
+	<li>Select your mesh terrain object. Click KLESKBY/Mesh2Terrain. You should see now a new unity3d terrain.</li>
+	<li>Move and edit it a bit to fir the origian terrain.</li>
+</ol>	
 
+<h2>Problems and ToDo list:</h2><br>
+However it is not that easy and to make it work noramly you need a good understanding how tarkov, Unity3d works and enough reverse engineering experance.
+<ol>
+	<li>Something teleports bots back to normal navmesh/terrian even tho i delete it. Maybe instead of removing terrain we can just remvoe props and add our own models??</li>
+	<li>A lot of errors that make significant perforance impact.</li>
+	<li>No bullet impact effect (need to create ballistic colliders). It is very tensely.</li>
+	<li>Idk how to create loot and loot pools</li>
+	<li>Moving exit triggers not quite accurate. Idk how to add my own exits</li>
+	<li>Idk how to create bot spawn zones.</li>
+</ol>	
+Instead of creating mods I decided to work on my own game so most likely I will not continue this unless someone help me
