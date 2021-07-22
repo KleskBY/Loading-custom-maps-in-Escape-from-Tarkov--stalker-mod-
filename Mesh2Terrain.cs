@@ -5,9 +5,8 @@ public class Mesh2Terrain : EditorWindow
 {
 	//Code not by me, I just optimized and fixed it a little bit.
 	private static int resolution = 1024;
-	[MenuItem("KLESKBY/Object to Terrain", false, 9998)] static void OnClick () 
+	[MenuItem("KLESKBY/Mesh2Terrain", false)] static void OnClick () 
 	{
-		//EditorWindow.GetWindow<Mesh2Terrain>(true);
 		if(Selection.activeGameObject == null)
 		{
 			Debug.LogError("Select an object you want to convert to terrain");
@@ -15,6 +14,12 @@ public class Mesh2Terrain : EditorWindow
 		}
 		else
 		{
+			if(!Selection.activeGameObject.activeSelf || !Selection.activeGameObject.activeInHierarchy)
+			{
+				Debug.LogError("Selected GameObject is not active!");
+				return;
+			}
+			
 			TerrainData terrain = new TerrainData();
 			terrain.heightmapResolution = resolution;
 			GameObject terrainObject = Terrain.CreateTerrainGameObject(terrain);
@@ -68,7 +73,7 @@ public class Mesh2Terrain : EditorWindow
 		}
 	}
 
-	[MenuItem("KLESKBY/All terrains to asset", false, 9999)] static void OnClick2() 
+	[MenuItem("KLESKBY/All terrains to asset", false)] static void OnClick2() 
 	{
 		TerrainData[] terrainDatas = FindObjectsOfType<TerrainData>();
 		for(int i = 0; i < terrainDatas.Length; i++)

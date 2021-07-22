@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class SelectAllObjectsContainName : EditorWindow
+public class FixStalkerMaterails : EditorWindow
 {
-    [MenuItem("Terrain/Select to", false, 2000)]
-    static void OpenWindow()
+    [MenuItem("KLESKBY/Fix stalker materials", false)]
+    static void OnClick()
     {
-
-
         GameObject[] objects = FindObjectsOfType<GameObject>();
         foreach (GameObject gameObject in objects)
         {
@@ -35,19 +33,6 @@ public class SelectAllObjectsContainName : EditorWindow
                 gameObject.GetComponent<Renderer>().material = mat;
                 gameObject.GetComponent<Renderer>().sharedMaterial = mat;
             }
-
-            //if (gameObject.name.Contains("crete_dirt_2"))
-            //{
-            //    Debug.Log(gameObject);
-            //    Object[] selectedObjects = new Object[Selection.objects.Length + 1];
-            //    for (int i = 0; i < Selection.objects.Length; i++)
-            //    {
-            //        selectedObjects[i] = Selection.objects[i];
-            //    }
-            //    selectedObjects[Selection.objects.Length] = gameObject;
-            //    Selection.objects = selectedObjects;
-
-            //}
         }
     }
 
