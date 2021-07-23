@@ -13,6 +13,7 @@ You will need: <br>
 <ol>
   <li>Create a new unity3d 2018 project.</li>
   <li>Create folder "Editor" and move CreateAssetBundles.cs inside (%ProjectDirectory%/Assets/Editor/CreateAssetBundles.cs)</li>
+  <li>Create folder "BundledAssets", create folder "testbundle" inside.</li>
   <li>Create cube with name "Kordon" in a scene and scale it (1000, 1 , 1000), then drug and drop it inside testbundle to create a prefab.</li>
   <li>Select prefab in project window. In bottom right corner set AssetBundle to testbundle.</li>
   <li>Click KLESKBY/Build AseetBundles in toolbar.</li>
@@ -33,7 +34,7 @@ To make the game load your bundle we need to add some code that will do it. We m
 <h2>Step 3: Converting stalker levels</h2>
 <ol>
 	<li>Convert .max level dump to .fbx using 3ds max or other software.</li>
-	<li>Scale model by 0.65 to better fit EFT player size (optional)</li>
+	<li>Scale model by 0.65 to better fit EFT player size (optional, can be done in Unity3D)</li>
 	<li>Install Blender plugins from this git (move .py files to %BlenderInstallLocation%\2.91\scripts\addons). </li>
 	<li>Launch blender, import level fbx. Click on Object>RemoveEverythingContains. This should delete all terrain objects.</li>
 	<li>Export it as .fbx and import inside unity.</li>
@@ -50,7 +51,7 @@ To make the game load your bundle we need to add some code that will do it. We m
 	<li>Place it as a child object of the cube.</li>
 	<li>Move Mesh2Terrain.cs inside "Editor" folder(%Unity3DProjectDirectory%/Assets/Editor/Mesh2Terrain.cs)</li>
 	<li>Select your mesh terrain object. Click KLESKBY/Mesh2Terrain. You should now see a new unity3d terrain.</li>
-	<li>Move and edit it a bit to fit the original terrain.</li>
+	<li>Move and edit it a bit to fit the original terrain. (202, -2 0) for me.</li>
 </ol>	
 
 <h2>Step 5: Finalizing </h2>
